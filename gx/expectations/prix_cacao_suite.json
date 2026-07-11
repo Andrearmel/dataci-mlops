@@ -1,0 +1,65 @@
+{
+  "expectations": [
+    {
+      "id": "a0855923-0d2b-4cbe-ae6f-1868eeb60b3a",
+      "kwargs": {
+        "column": "prix_xof"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_not_be_null"
+    },
+    {
+      "id": "af9f4cac-194a-40b8-a725-d2a232e9d9ae",
+      "kwargs": {
+        "column": "prix_xof",
+        "max_value": 20000.0,
+        "min_value": 500.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "60b202a8-68b6-485f-acdf-cb8e2e3df59a",
+      "kwargs": {
+        "column": "humidite_pct",
+        "max_value": 100.0,
+        "min_value": 0.0
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_between"
+    },
+    {
+      "id": "e18f0412-8f55-4b10-b9b1-3c3b6aee2f4f",
+      "kwargs": {
+        "column": "date"
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_unique"
+    },
+    {
+      "id": "1fdd6e66-fcfb-4c26-893a-0102c4dd2eb1",
+      "kwargs": {
+        "column": "pays_origine",
+        "value_set": [
+          "C\u00f4te d'Ivoire",
+          "Ghana",
+          "Nig\u00e9ria",
+          "Cameroun"
+        ]
+      },
+      "meta": {},
+      "severity": "critical",
+      "type": "expect_column_values_to_be_in_set"
+    }
+  ],
+  "id": "2c59bf5b-df71-4f1d-83fc-a80a23f729d8",
+  "meta": {
+    "great_expectations_version": "1.18.2"
+  },
+  "name": "prix_cacao_suite",
+  "notes": null
+}

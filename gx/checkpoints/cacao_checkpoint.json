@@ -1,0 +1,18 @@
+{
+  "actions": [
+    {
+      "name": "update_data_docs",
+      "site_names": [],
+      "type": "update_data_docs"
+    }
+  ],
+  "id": "7ced9899-4cf9-4304-beb6-7597e5020e94",
+  "name": "cacao_checkpoint",
+  "result_format": "SUMMARY",
+  "validation_definitions": [
+    {
+      "id": "c9141b43-862f-43a1-ab65-f441a4b3d03c",
+      "name": "cacao_validation"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "asset": {
+      "id": "d8f4ac7f-8829-446a-9065-b879f1f8347e",
+      "name": "cacao_asset"
+    },
+    "batch_definition": {
+      "id": "75e6e19f-51ea-4dee-94bd-a594e9b44247",
+      "name": "cacao_batch"
+    },
+    "datasource": {
+      "id": "6d36fc26-925b-4bbb-ba39-e5d3f6bebe6c",
+      "name": "cacao_source"
+    }
+  },
+  "id": "c9141b43-862f-43a1-ab65-f441a4b3d03c",
+  "name": "cacao_validation",
+  "suite": {
+    "id": "2c59bf5b-df71-4f1d-83fc-a80a23f729d8",
+    "name": "prix_cacao_suite"
+  }
+}
