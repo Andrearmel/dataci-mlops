@@ -1,0 +1,72 @@
+schema: '2.0'
+stages:
+  clean:
+    cmd: python src/clean.py data/raw/prix_cacao_fao_2015_2024.csv 
+      data/clean/prix_cacao_clean.csv metrics/clean_metrics.json
+    deps:
+    - path: data/raw/prix_cacao_fao_2015_2024.csv
+      hash: md5
+      md5: a0a98b7b0ea339216c06142e724e44e3
+      size: 44658
+    - path: src/clean.py
+      hash: md5
+      md5: e533b3de596e9e62c93c3460204c37d8
+      size: 938
+    outs:
+    - path: data/clean/prix_cacao_clean.csv
+      hash: md5
+      md5: 45b03f0e4faa7f6a64d62f9b42de1db0
+      size: 43846
+    - path: metrics/clean_metrics.json
+      hash: md5
+      md5: f64aeea479ecf310e447cf495072b8d2
+      size: 60
+  validate:
+    cmd: python src/validate.py data/clean/prix_cacao_clean.csv
+    deps:
+    - path: data/clean/prix_cacao_clean.csv
+      hash: md5
+      md5: 45b03f0e4faa7f6a64d62f9b42de1db0
+      size: 43846
+    - path: src/validate.py
+      hash: md5
+      md5: bdf8aadc61ed878b17a36fc158290ccb
+      size: 2325
+  features:
+    cmd: python src/features.py data/clean/prix_cacao_clean.csv 
+      data/features/features_all.csv
+    deps:
+    - path: data/clean/prix_cacao_clean.csv
+      hash: md5
+      md5: 45b03f0e4faa7f6a64d62f9b42de1db0
+      size: 43846
+    - path: src/features.py
+      hash: md5
+      md5: 56205aeb6b9ee252dec329c532bd8b4f
+      size: 1054
+    outs:
+    - path: data/features/features_all.csv
+      hash: md5
+      md5: 52b5525993a928a8744384c47005e563
+      size: 78620
+  split:
+    cmd: python src/split.py data/features/features_all.csv 
+      data/features/train.csv data/features/test.csv
+    deps:
+    - path: data/features/features_all.csv
+      hash: md5
+      md5: 52b5525993a928a8744384c47005e563
+      size: 78620
+    - path: src/split.py
+      hash: md5
+      md5: 211e34c63b8f301e94653822a816f344
+      size: 692
+    outs:
+    - path: data/features/test.csv
+      hash: md5
+      md5: 9dc8abbde9a5a2b0b5852301991a5675
+      size: 15836
+    - path: data/features/train.csv
+      hash: md5
+      md5: c4410c63c7dc9412d7857aafa75a0210
+      size: 62033
