@@ -1,0 +1,203 @@
+{
+  "id": null,
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {
+        "dataframe": "<DATAFRAME>"
+      },
+      "data_asset_name": "cacao_asset",
+      "data_connector_name": "fluent",
+      "datasource_name": "cacao_source"
+    },
+    "batch_markers": {
+      "ge_load_time": "20260711T113718.910506Z",
+      "pandas_data_fingerprint": "02b3a2a440c70317728f1040569b0184"
+    },
+    "batch_parameters": {
+      "dataframe": "<DATAFRAME>"
+    },
+    "batch_spec": {
+      "batch_data": "PandasDataFrame"
+    },
+    "checkpoint_id": "7ced9899-4cf9-4304-beb6-7597e5020e94",
+    "great_expectations_version": "1.18.2",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2026-07-11T11:37:18.898897+00:00"
+    },
+    "validation_id": "c9141b43-862f-43a1-ab65-f441a4b3d03c",
+    "validation_time": "2026-07-11T11:37:18.898897+00:00"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "a0855923-0d2b-4cbe-ae6f-1868eeb60b3a",
+        "kwargs": {
+          "batch_id": "cacao_source-cacao_asset",
+          "column": "prix_xof"
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_not_be_null"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 515,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "af9f4cac-194a-40b8-a725-d2a232e9d9ae",
+        "kwargs": {
+          "batch_id": "cacao_source-cacao_asset",
+          "column": "prix_xof",
+          "max_value": 20000.0,
+          "min_value": 500.0
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_be_between"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 515,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "60b202a8-68b6-485f-acdf-cb8e2e3df59a",
+        "kwargs": {
+          "batch_id": "cacao_source-cacao_asset",
+          "column": "humidite_pct",
+          "max_value": 100.0,
+          "min_value": 0.0
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_be_between"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 515,
+        "missing_count": 2,
+        "missing_percent": 0.3883495145631068,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "e18f0412-8f55-4b10-b9b1-3c3b6aee2f4f",
+        "kwargs": {
+          "batch_id": "cacao_source-cacao_asset",
+          "column": "date"
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_be_unique"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 515,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "id": "1fdd6e66-fcfb-4c26-893a-0102c4dd2eb1",
+        "kwargs": {
+          "batch_id": "cacao_source-cacao_asset",
+          "column": "pays_origine",
+          "value_set": [
+            "C\u00f4te d'Ivoire",
+            "Ghana",
+            "Nig\u00e9ria",
+            "Cameroun"
+          ]
+        },
+        "meta": {},
+        "severity": "critical",
+        "type": "expect_column_values_to_be_in_set"
+      },
+      "meta": {},
+      "result": {
+        "element_count": 515,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": [],
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 5,
+    "success_percent": 100.0,
+    "successful_expectations": 5,
+    "unsuccessful_expectations": 0
+  },
+  "success": true,
+  "suite_name": "prix_cacao_suite",
+  "suite_parameters": {}
+}
